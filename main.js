@@ -1,6 +1,17 @@
 // SPA
 
+const known = ['/', 'about-me', 'contact', 'home', 'projects', 'this-website'];
+
 const fetchResource = async path => {
+  let isKnown = false;
+  for (let i = 0; i < known.length; i++) {
+    if (path == known[i]) {
+      isKnown = true;
+    }
+  }
+  if (!known) {
+    path = '404';
+  }
   let target = document.getElementById('main');
   try {
     let response = await fetch('api/' + path + '.html');
