@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Andreu Esteras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans:600,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <header id='site-header'>
+    <div class="site-header-container">
+      <h1 class="site-header-logo">
+        <a href="/home" onclick="onClickNav('/home'); return false;">&AElig;</a>
+      </h1>
+      <div class="menu-button-container">
+        <a id="header-menu-button" onclick="onClickMenu();">
+          <!-- Menu SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </a>
+      </div>
+      <nav id="site-header-nav" class="site-header-nav">
+        <ul>
+          <li class="site-nav-item">
+            <a href="/this-website" onclick="onClickNav('/this-website'); return false;">This Webite</a>
+          </li>
+          <li class="site-nav-item">
+            <a href="/about-me" onclick="onClickNav('/about-me'); return false;">About Me</a>
+          </li>
+          <li class="site-nav-item">
+            <a href="/projects" onclick="onClickNav('/projects'); return false;">Projects</a>
+          </li>
+          <li class="site-nav-item">
+            <a href="/contact" onclick="onClickNav('/contact'); return false;">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main"></main>
+  <footer id='footer' class="margin-top">
+    <p class="text-center">Andreu Esteras</p>
+    <p class="text-center">2019</p>
+  </footer>
+</body>
+</html>
