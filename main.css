@@ -6,11 +6,6 @@
   --color-gray-600: #757575;
   --color-gray-900: #212121;
   --color-accent-200: #81D4FA;
-  /* --color-accent-200: #FFF59D; */
-  /* --color-accent-400: #FFEE58; */
-  /* --color-accent-700: #FBC02D; */
-  /* --color-accent-800: #F9A825; */
-  /* --color-accent-900: #F57F17; */
   --color-accent-800: #0277BD;
   --color-accent-900: #01579B;
   --color-error-800: #C62828;
@@ -177,7 +172,7 @@ article p {
 #site-header {
   background-color: white;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   transition: all .2s ease;
 }
 

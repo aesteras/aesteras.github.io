@@ -1,9 +1,20 @@
 // SPA
 
+const known = ['/', '/home', '/about-me', '/contact', '/projects', '/this-website'];
+
 const fetchResource = async path => {
+  let isKnown = false;
+  for (let i = 0; i < known.length; i++) {
+    if (path == known[i]) {
+      isKnown = true;
+    }
+  }
+  if (!isKnown) {
+    path = '/404';
+  }
   let target = document.getElementById('main');
   try {
-    let response = await fetch('api/' + path + '.html');
+    let response = await fetch('api' + path + '.html');
     let html = await response.text();
     target.innerHTML = html;
   } catch (err) {
@@ -14,8 +25,10 @@ const fetchResource = async path => {
       posters[i].onload = repositionIfNeeded;
     }
     let profiles = document.getElementsByClassName('profile-container');
-    for (let i = 0; i < posters.length; i++) {
-      profiles[i].onload = repositionIfNeeded;
+    if (profiles) {
+      for (let i = 0; i < posters.length; i++) {
+        profiles[i].onload = repositionIfNeeded;
+      }
     }
   }
 }
@@ -38,7 +51,7 @@ const onClickNav = nextPath => {
   if (menuIsVisible) {
     nav.classList.remove('menu-enabled');
     hdr.classList.remove('header-bottom-border');
-    btn.innerHTML = '<img src="/img/menu.svg" alt="Menu">';
+    btn.innerHTML = svgMenu;
     menuIsVisible = false;
   }
   fetchResource(nextPath);
@@ -63,7 +76,7 @@ window.onload = async () => {
     curr: currPath,
     next: currPath
   };
-  fetchResource(currPath.slice(1));
+  fetchResource(currPath);
   window.history.replaceState(state, currPath[0].toUpperCase() + currPath.slice(1), currPath);
 };
 
