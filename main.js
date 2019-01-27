@@ -9,7 +9,7 @@ const fetchResource = async path => {
       isKnown = true;
     }
   }
-  if (!known) {
+  if (!isKnown) {
     path = '404';
   }
   let target = document.getElementById('main');
