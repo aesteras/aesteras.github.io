@@ -1,6 +1,7 @@
 // SPA
 
-const known = ['/', '/home', '/about-me', '/contact', '/projects', '/this-website'];
+// serverless workaround
+const known = ['/', '/home', '/about-me', '/contact', '/projects', '/this-website', '/webcrypto'];
 
 const fetchResource = async path => {
   let isKnown = false;
