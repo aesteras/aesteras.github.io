@@ -377,8 +377,8 @@ svg {
 @media(min-width: 50em) {
 
   #cv {
-    height: 100%;
-  }
+
+
 
   .site-header-container {
     display: flex;
