@@ -377,7 +377,7 @@ svg {
 @media(min-width: 50em) {
 
   #cv {
-    height: 25rem;
+    height: 100%;
   }
 
   .site-header-container {
