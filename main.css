@@ -376,6 +376,10 @@ svg {
 
 @media(min-width: 50em) {
 
+  #cv {
+    height: 25rem;
+  }
+
   .site-header-container {
     display: flex;
     align-items: center;
