@@ -8,8 +8,8 @@ const UTF8 = {
 };
 
 const encrypt = async (dataAsBytes, passwordAsBytes) => {
-  const salt = self.crypto.getRandomValues(new Uint8Array(32));
-  const iv = self.crypto.getRandomValues(new Uint8Array(12));
+  const salt = self.crypto.getRandomValues(new Uint8Array(SALT_LENGTH));
+  const iv = self.crypto.getRandomValues(new Uint8Array(IV_LENGTH));
   const passwordKey = await self.crypto.subtle.importKey(
     'raw',
     passwordAsBytes,

@@ -1,7 +1,3 @@
-const ITERATIONS = 250000;
-const SALT_LENGTH = 32;
-const IV_LENGTH = 12;
-
 const UTF8 = {
   encode: d => new TextEncoder('utf-8').encode(d),
   decode: e => new TextDecoder('utf-8').decode(e)
